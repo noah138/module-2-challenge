@@ -8,6 +8,7 @@
     --primary:lavender;
     --fill:lightgreen;
     --title:darkgreen;
+    --border:black;
 }
 
 .header {
@@ -16,7 +17,7 @@
     margin: -10px;
 }
 
-h1 {
+header h1 {
     text-indent: 120px;
     height: 60px;
     line-height: 40px;
@@ -41,31 +42,105 @@ h1 {
 
 .background-image {
     height: 250px;
-    width: 100%;
     margin-bottom: 25px;
     background-color:blue;
 }
 
+aside {
+    clear: both;
+    float: left;
+    width: 23%;
+    padding-right: 10px;
+    padding-left:10px;
+}
+
+aside h2 {
+    text-align: right;
+    font-size: xx-large;
+}
+
+.aboutme {
+    border-right: 2px solid black;
+}
+
+.work {
+    height: 200px;
+}
+
 main {
+    width:74%;
+    float:right;
     min-height: 60vp;
     margin-right: 2%;
     display: flex;
     flex-wrap: wrap;
 }
 
+#big {
+    width:98%;
+    height:400px;
+}
+
 section {
     width: 48%;
     border: 4px solid var(--primary);
-    height: 200px;
+    height: 100px;
     margin: 1%;
     background-color: purple;
 }
 
-section h3, section p{
+section h3{
     border: 4px solid var(--primary);
     background-color: var(--primary);
-    line-height: 100px;
-    float:left;
+    line-height: 50px;
+    float: left;
     position:relative;
     top:35%;
+    font-size: 12px;
+}
+
+.bio {
+    float: right;
+    width: 74%;
+}
+
+footer {
+    width:100%;
+    float:right;
+    min-height: 20vp;
+    display: flex;
+    flex-wrap: wrap;;
+}
+
+footer h1 {
+    font-size: xx-large;
+    text-align: right;
+    padding: 5%;
+
+}
+
+.contact {
+    width: 23%;
+    border-right: 2px solid var(--border);
+    float:left;
+    height: 100px;
+    margin: 1%;
+}
+
+footer nav {
+    width:70%;
+    float:right;
+    justify-content: space-around;
+    display: flex;
+    height: 100px;
+    margin: 1%;
+}
+
+footer a{
+    padding:38px 0;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 992px) {
+    section {width}
 }
