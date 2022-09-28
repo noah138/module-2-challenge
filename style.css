@@ -1,14 +1,17 @@
 * {
+    background-color: var(--background);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 :root {
-    --primary:lavender;
-    --fill:lightgreen;
-    --title:darkgreen;
-    --border:black;
+    --background:#6290C8;
+    --primary:#376996;
+    --fill:#829CBC;
+    --title:#1F487E;
+    --border:#1D3461;
 }
 
 /* header */
@@ -32,6 +35,7 @@ header {
 .header h1 {
     flex-wrap: nowrap;
     text-align: right;
+    color: var(--title)
 }
 
 .topnav {
@@ -51,7 +55,7 @@ header {
 .background-image {
     width: 100%;
     min-height: 30vh;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     background-image: url(./images/99.jpeg);
     background-size: cover;
     background-position: center;
@@ -135,16 +139,22 @@ main h1 {
     height:400px;
 }
 
-section {
+.projects a {
     width: 48%;
     border: 4px solid var(--primary);
     height: 100px;
     margin: 1%;
-    background: rgba(76, 175, 80, 0.3);
+    background-color: #e5e5f7;
+        opacity: 0.3;
+        background-image:  linear-gradient(#444cf7 1px, transparent 1px), linear-gradient(to right, #444cf7 1px, #e5e5f7 1px);
+        background-size: 20px 20px;
 }
 
-section:hover {
-    background: rgba(76, 175, 80, 1);
+.projects a:hover {
+    background-color: #e5e5f7;
+        opacity: 0.9;
+        background-image:  linear-gradient(#444cf7 1px, transparent 1px), linear-gradient(to right, #444cf7 1px, #e5e5f7 1px);
+        background-size: 20px 20px;
     transition: all 0.8s ease;
 }
 
@@ -221,6 +231,7 @@ footer a {
         background-size: cover;
         background-position: center;
         margin-top: 55px;
+        margin-bottom: 0px;
     }
 
     .bio,
@@ -261,4 +272,57 @@ footer a {
     .hide-on-small {
         display: none;
     }
+}
+
+@media screen and (max-width: 480px) {
+
+    .header {
+        height: 61px;
+    }
+
+    .subtitle {
+        margin-top: 80px;
+        margin-right: 30px;
+    }
+
+    .subtitle h2 {
+        font-size: medium;
+    }
+
+    .projects a {
+        width: 94%;
+        margin-left: 3%;
+        margin-right: 3%;
+        justify-content: center;
+    }
+
+    #big {
+        height: 100px;
+    }
+
+    #bottom-corner {
+        top: 45%;
+    }
+
+    footer nav {
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    footer a {
+        margin-left: 30px;
+        padding:12px 0;
+        text-decoration: none;
+    }
+
+    .sidebar-top,
+    .sidebar-middle,
+    .sidebar-bottom {
+        margin-bottom: 10px;
+    }
+
+    .background-image {
+        width: 100%;
+        min-height: 140px;
+   }
 }
