@@ -7,7 +7,7 @@
 
 :root {
     --background:#6290C8;
-    --primary:#376996;
+    --primary:#517664;
     --fill:white;
     --sidebar:#3A2D32;
     --border:#B88E8D;
@@ -34,7 +34,7 @@ header {
 
 .header h1 {
     text-align: right;
-    color: var(--sidebar)
+    color: var(--sidebar);
 }
 
 .topnav {
@@ -46,7 +46,7 @@ header {
 
 .topnav a {
     margin-right: 15%;
-    text-decoration: none;
+    color: var(--primary);
 }
 
 /* background image */
@@ -139,22 +139,52 @@ main h1 {
     height:400px;
 }
 
+#one {
+    background: rgba(34, 9, 1, .3);
+}
+
+#one:hover {
+    background: rgba(34, 9, 1, .9);
+    transition: all 0.8s ease;
+}
+
+#two {
+    background: rgba(98, 23, 8, .3);
+}
+
+#two:hover {
+    background: rgba(98, 23, 8, .9);
+    transition: all 0.8s ease;
+}
+
+#three {
+    background: rgba(148, 27, 12, .3);
+}
+
+#three:hover {
+    background: rgba(148, 27, 12, .9);
+    transition: all 0.8s ease;
+}
+
+#four {
+    background: rgba(188, 57, 8, .3);
+}
+
+#four:hover {
+    background: rgba(188, 57, 8, .9);
+    transition: all 0.8s ease;
+}
+
 .projects a {
     width: 48%;
     border: 4px solid var(--sidebar);
     height: 100px;
     margin: 1%;
-    background-color: #e7dfdb;
-        opacity: 0.3;
-        background-image: radial-gradient(#517664 0.5px, #e7dfdb 0.5px);
-        background-size: 10px 10px;
+    background: rgba(246, 170, 28, .3);
 }
 
 .projects a:hover {
-    background-color: #e7dfdb;
-        opacity: 0.9;
-        background-image: radial-gradient(#517664 0.5px, #e7dfdb 0.5px);
-        background-size: 10px 10px;
+    background: rgba(246, 170, 28, .9);
     transition: all 0.8s ease;
 }
 
@@ -167,9 +197,9 @@ main h1 {
     position:relative;
     float: left;
     padding: 1%;
-    top: 37%;
+    top: 30px;
     font-size: 14px;
-    left: 1.5%;
+    left: -4px;
 }
 
 #bottom-corner {
@@ -189,7 +219,7 @@ footer nav {
 
 footer a {
     padding:38px 0;
-    text-decoration: none;
+    color: var(--sidebar);
 }
 
 @media screen and (max-width: 992px) {
@@ -212,6 +242,7 @@ footer a {
     
     .header h1 {
         text-align: center;
+        color: var(--fill)
     }
 
     .topnav {
